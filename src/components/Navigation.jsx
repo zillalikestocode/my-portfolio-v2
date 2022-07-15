@@ -1,7 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import MenuItem from './MenuItem'
-import NavSocials from './NavSocials'
 
 const Navigation = ({links}) => {
 	const variants = {
