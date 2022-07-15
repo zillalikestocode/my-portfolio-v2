@@ -3,7 +3,7 @@ import { motion, useCycle} from 'framer-motion'
 import MenuToggle from './MenuToggle'
 import useDimensions from './use-dimension'
 import Navigation from './Navigation'
-
+import NavSocials from './NavSocials'
 const sidebar = {
 	open: (height = 1000)=> ({
 			clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
@@ -54,6 +54,7 @@ const SideBar = ({links}) => {
 			<motion.div className="absolute top-0 right-0 bottom-0 w-[300px] bg-gray-700" variants={sidebar}/>
 			<MenuToggle toggle={() => toggleOpen()} />
 			<Navigation links={links} />
+			<NavSocials />
 		</motion.nav>
 	)
 }

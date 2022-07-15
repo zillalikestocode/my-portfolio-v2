@@ -1,6 +1,7 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 import MenuItem from './MenuItem'
+import NavSocials from './NavSocials'
 
 const Navigation = ({links}) => {
 	const variants = {
@@ -12,13 +13,15 @@ const Navigation = ({links}) => {
 		}
 	}
 	return (
-		<motion.ul className="absolute top-[80px] p-10" variants={variants}>
-			{ links.map(({ name, id, link})=> {
+		<div className="absolute top-[50px]">
+		<motion.ul className="p-6 w-full" variants={variants}>
+			{ links.map(({ name, id, link, icon, notALink})=> {
 				return (
-					<MenuItem name={name} link={link} key={id} />
+					<MenuItem name={name} link={link} key={id} icon={icon} notALink={notALink}/>
 				)
 			})}
 		</motion.ul>
+		</div>
 	)
 }
 

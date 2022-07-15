@@ -9,16 +9,18 @@ const ProjectSkills = () => {
 		visible: {
 			opacity: 1,
 			transition: {
-				staggerChildren: 0.4,
+				staggerChildren: 0.08,
 			}
 		}
 	}
 	const button = {
 		hidden: {
-			y: 100
+			y: 100,
+			opacity: 0,
 		},
 		visible: {
 			y: 0,
+			opacity: 1,
 			transition: {
 				ease: 'easeInOut',
 				duration: 0.2
