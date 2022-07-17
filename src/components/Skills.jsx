@@ -17,6 +17,7 @@ const Skills = ({skills}) => {
 					)
 				})}
 			</motion.div>
+			<p className="italic text-[#f5f5f5] mt-10">"Learning has no time or age restriction, all that we need is a passion for lifelong learning."</p>
 		</motion.div>
 	)
 }

@@ -22,9 +22,9 @@ const MenuItem = ({name, link, icon, toggle, isOpen}) => {
 	return (
 		<>
 		{link ? 
-			<Link to={link} onClick={toggle}><motion.li variants={variants} className="flex items-center cursor-pointer my-5 text-xl font-medium opacity-0 text-violet-600" >
+			<Link to={link} className={!isOpen && 'pointer-events-none cursor-none' } onClick={toggle}><motion.li variants={variants} className="flex items-center cursor-pointer my-5 text-xl font-medium opacity-0 text-violet-600" >
 				{icon && <div className="p-3">{icon}</div>}{typeof(name) === 'string' ? (<label htmlFor="">{name}</label>) : name}
-			</motion.li></Link> : <motion.li variants={variants} className="flex items-center cursor-pointer my-5 text-xl font-medium opacity-0 text-violet-600">
+			</motion.li></Link> : <motion.li variants={variants} className={isOpen ? "flex items-center cursor-pointer my-5 text-xl font-medium opacity-0 text-violet-600" : "flex items-center cursor-none pointer-events-none my-5 text-xl font-medium opacity-0 text-violet-600"}>
 				{icon && <div className="p-3">{icon}</div>}{typeof(name) === 'string' ? (<label htmlFor="">{name}</label>) : name}
 			</motion.li>}
 

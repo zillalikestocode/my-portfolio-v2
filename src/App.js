@@ -11,6 +11,7 @@ import { BiNetworkChart } from 'react-icons/bi'
 import Button from './components/Button'
 import Skills from './components/Skills'
 import { TbBrandJavascript, TbBrandHtml5, TbBrandCss3, TbBrandPython } from 'react-icons/tb'
+import About from './components/About'
 
 function App() {
 	const iconSize= 20
@@ -102,6 +103,7 @@ function App() {
       <Routes>
       	<Route path='/' element={<Home slide={textSlide}/>} />
       	<Route path='/skills' element={<Skills skills={skills}/>} />
+      	<Route path='/about' element={<About />} />
       </Routes>
     </>
   );

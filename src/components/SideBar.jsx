@@ -12,7 +12,8 @@ const sidebar = {
 				restDelta: 2
 			}
 		}),
-	closed: {		clipPath: 'circle(25px at 260px 40px)',
+	closed: {		
+		clipPath: 'circle(25px at 260px 40px)',
 		transition: {
 			delay: 0.5,
 			type: 'spring',
