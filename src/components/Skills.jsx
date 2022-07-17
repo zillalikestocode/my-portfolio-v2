@@ -9,7 +9,7 @@ const Skills = ({skills}) => {
 			<motion.div className='flex flex-wrap items-center text-center'>
 				{skills.map(({name, pct, icon, id})=> {
 					return (
-						<motion.div key={id} className="m-auto relative px-4">
+						<motion.div key={id} className="m-auto relative px-1">
 							<ProgressRing pct={pct} radius={40} />
 							<motion.div className="absolute text-[#f5f5f5] top-[30%] left-[50%] translate-y-[-50%] translate-x-[-50%]">{icon}</motion.div>
 							<h4 className="py-3 text-lg font-medium text-[#f5f5f5]">{name}</h4>
