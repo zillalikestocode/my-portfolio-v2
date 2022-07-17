@@ -5,11 +5,12 @@ import Header from './components/Header'
 import SideBar from './components/SideBar'
 import { Route, Routes} from 'react-router-dom'
 import { motion, AnimatePresence} from 'framer-motion'
-import { FaHome, FaLaptopCode } from 'react-icons/fa'
+import { FaHome, FaLaptopCode, FaReact } from 'react-icons/fa'
 import { TbWriting } from 'react-icons/tb'
 import { BiNetworkChart } from 'react-icons/bi'
 import Button from './components/Button'
 import Skills from './components/Skills'
+import { TbBrandJavascript, TbBrandHtml5, TbBrandCss3, TbBrandPython } from 'react-icons/tb'
 
 function App() {
 	const iconSize= 20
@@ -44,6 +45,38 @@ function App() {
 		notALink: true,
 	}
 	])
+	const [skills, setSkills] = useState([
+	{
+		id: 1,
+		name: "ReactJS",
+		pct: 70,
+		icon: <FaReact size={40} />
+	},
+	{
+		id: 2,
+		name: "VanillaJS",
+		pct: 75,
+		icon: <TbBrandJavascript size={40}/>
+	},
+	{
+		id: 3,
+		name: "HTML5",
+		pct: 90,
+		icon: <TbBrandHtml5 size={40}/>
+	},
+	{
+		id: 4,
+		name: "CSS3",
+		pct: 80,
+		icon: <TbBrandCss3 size={40}/>
+	},
+	{
+		id: 5,
+		name: "Python",
+		pct: 55,
+		icon: <TbBrandPython size={40}/>
+	}
+	])
 	const [width, setWidth] = useState(window.innerWidth)
 	const [textSlide, setSlide] = useState(1)
 
@@ -68,7 +101,7 @@ function App() {
       { width < 650 && <SideBar links={navlinks} />}
       <Routes>
       	<Route path='/' element={<Home slide={textSlide}/>} />
-      	<Route path='/skills' element={<Skills />} />
+      	<Route path='/skills' element={<Skills skills={skills}/>} />
       </Routes>
     </>
   );

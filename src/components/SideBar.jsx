@@ -46,13 +46,13 @@ const SideBar = ({links}) => {
 			initial='initial'
 			animate={isOpen ? 'open' : 'closed'}
 			custom={height}
-			className="absolute top-0 bottom-0 right-0 w-[300px]"
+			className="absolute top-0 bottom-0 right-0 w-[300px] z-10"
 			ref={containerRef}
 			variants={slideIn}
 			>
 			<motion.div className="absolute top-0 right-0 bottom-0 w-[300px] bg-gray-700" variants={sidebar}/>
 			<MenuToggle toggle={() => toggleOpen()} />
-			<Navigation links={links} />
+			<Navigation links={links} toggle={() => toggleOpen()} isOpen={isOpen}/>
 		</motion.nav>
 	)
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-const MenuItem = ({name, link, icon}) => {
+const MenuItem = ({name, link, icon, toggle, isOpen}) => {
 	const variants = {
 		open: {
 			y: 0,
@@ -22,11 +22,12 @@ const MenuItem = ({name, link, icon}) => {
 	return (
 		<>
 		{link ? 
-			<Link to={link}><motion.li variants={variants} className="flex items-center cursor-pointer my-5 text-xl font-medium opacity-0 text-violet-600">
+			<Link to={link} onClick={toggle}><motion.li variants={variants} className="flex items-center cursor-pointer my-5 text-xl font-medium opacity-0 text-violet-600" >
 				{icon && <div className="p-3">{icon}</div>}{typeof(name) === 'string' ? (<label htmlFor="">{name}</label>) : name}
 			</motion.li></Link> : <motion.li variants={variants} className="flex items-center cursor-pointer my-5 text-xl font-medium opacity-0 text-violet-600">
 				{icon && <div className="p-3">{icon}</div>}{typeof(name) === 'string' ? (<label htmlFor="">{name}</label>) : name}
 			</motion.li>}
+
 		</>
 	)
 }
