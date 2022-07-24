@@ -12,7 +12,11 @@ import Button from './components/Button'
 import Skills from './components/Skills'
 import { TbBrandJavascript, TbBrandHtml5, TbBrandCss3, TbBrandPython } from 'react-icons/tb'
 import About from './components/About'
-
+import glockchain from './images/Glockchain.com.png'
+import todov2 from './images/Todo list 2.0.png'
+import todo from './images/Todo list.png'
+import portfolio from './images/Welcome to my Portfolio.png'
+import Projects from './components/Projects'
 function App() {
 	const iconSize= 20
 	const [navlinks, setLInks] = useState([
@@ -78,6 +82,36 @@ function App() {
 		icon: <TbBrandPython size={40}/>
 	}
 	])
+	const [projects, setProjects] = useState([
+	{
+		id: 1,
+		name: 'Blockchain.com parody clone',
+		ref: 'https://glockchain.pages.dev',
+		desc: 'A blockchain.com parody clone made with ReactJS, SwiperJS and TailwindCSS ',
+		img: glockchain
+	},
+	{
+		id: 2,
+		name: 'To-do list V2',
+		ref: 'https://zillastodo-v2.pages.dev',
+		desc: "Improved version of my to-do list created with ReactJS and stores the generated list to the browser's local storage",
+		img: todov2
+	},
+	{
+		id: 3,
+		name: 'The first version of my Portfolio',
+		ref: 'https://zillacodes.pages.dev',
+		desc: 'My first Portfolio made with HTML, CSS and Javascript.',
+		img: portfolio,
+	},
+	{
+		id: 4,
+		name: 'To-do list V1',
+		ref: 'https://zillastodo.pages.dev',
+		desc: 'A todo list made with HTML, CSS and Javascript. My first Javascript Project xD',
+		img: todo,
+	}
+	])
 	const [width, setWidth] = useState(window.innerWidth)
 	const [textSlide, setSlide] = useState(1)
 
@@ -104,6 +138,7 @@ function App() {
       	<Route path='/' element={<Home slide={textSlide}/>} />
       	<Route path='/skills' element={<Skills skills={skills}/>} />
       	<Route path='/about' element={<About />} />
+      	<Route path="/projects" element={<Projects projects={projects} />} />
       </Routes>
     </>
   );

@@ -63,8 +63,8 @@ const Home = ({slide}) => {
 		}
 	}
   return (
-  	<motion.div className="pt-16 w-full">
-	    <motion.div className="flex mx-7 md:mx-20 items-center" variants={flex} initial="hidden" animate="visible" exit='exit'>
+  	<motion.div className="pt-16 w-full absolute z-10">
+	    <motion.div className="flex mx-auto w-[80%] md:mx-20 items-center" variants={flex} initial="hidden" animate="visible" exit='exit'>
 	    	<motion.div className="flex flex-col pr-3"
 	    		variants={socials} >
 	    		

@@ -22,4 +22,10 @@ circle {
 	position: relative;
 	z-index: 1;
 }
+.viewSkills {
+	background-image: linear-gradient(to right, #7c3aed, #d946ef);
+	background-clip: text;
+	color: transparent;
+}
+
 

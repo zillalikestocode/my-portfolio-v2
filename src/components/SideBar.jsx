@@ -29,13 +29,17 @@ const slideIn = {
 	},
 	closed: {
 		x: 0,
+		zIndex: 5,
 		transition: {
 			type: 'spring',
-			duration: 0.4
+			duration: 0.4,
+			delay: 1,  
 		}
 	},
 	open: {
-		x: 0,	}
+		x: 0,
+		zIndex: 20,	
+		}
 }
 
 const SideBar = ({links}) => {
@@ -47,7 +51,7 @@ const SideBar = ({links}) => {
 			initial='initial'
 			animate={isOpen ? 'open' : 'closed'}
 			custom={height}
-			className="absolute top-0 bottom-0 right-0 w-[300px] z-10"
+			className="absolute top-0 bottom-0 right-0 w-[300px]"
 			ref={containerRef}
 			variants={slideIn}
 			>

@@ -26,7 +26,7 @@ const Header = ({ links, width }) => {
 				<h4 className="text-2xl font-semibold">zilla</h4>
 				{width >= 650 && <div className="flex items-center ml-auto">
 									{ links.map((link) => {
-										return <div key={link.id} className="m-3 brightness-[0.9] hover:brightness-105 font-medium">{<Link to={link.link}>{link.name}</Link>}</div>
+										return link.link ? <div key={link.id} className="m-3 brightness-[0.9] hover:brightness-105 font-medium text-[#f5f5f5]">{<Link to={link.link}>{link.name}</Link>}</div> : <div key={link.id} className="m-3 brightness-[0.9] hover:brightness-105 font-medium">{link.name}</div>
 									})}
 				</div>}
 			</motion.nav>

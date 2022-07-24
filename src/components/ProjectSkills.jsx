@@ -22,6 +22,7 @@ const ProjectSkills = () => {
 		visible: {
 			y: 0,
 			opacity: 1,
+			zIndex: 7,
 			transition: {
 				ease: 'easeInOut',
 				duration: 0.2
@@ -30,12 +31,12 @@ const ProjectSkills = () => {
 	}
 	
 	return (
-		<motion.div className="flex flex-col ml-20 mt-5 " variants={variants} initial="hidden" animate="visible">
+		<motion.div className="flex flex-col mx-auto mt-5 items-center" variants={variants} initial="hidden" animate="visible">
 		<Link to="/projects" >
-			<Button variants={button} styles=" my-3 rounded-md p-3 px-4 bg-violet-600 text-[#f5f5f5] font-medium w-fit" text="View my projects" whileHover={{scale: 1.1}}  />
+			<Button whileTap={{scale: 0.9}} variants={button} styles=" my-3 rounded-lg p-3 px-4 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-[#f5f5f5] font-medium w-fit z-[9]" text="View my projects" whileHover={{scale: 1.1}}  />
 		</Link>
 			<Link to="/skills">
-				<Button variants={button} styles=" my-3 rounded-md p-3 text-violet-600 border-2 border-violet-600 font-medium w-fit" text="View my skills" whileHover={{scale: 1.1}}  />
+				<Button whileTap={{scale: 0.9}} variants={button} styles="rounded-lg border-2 border-violet-600  my-3 p-3 font-medium viewSkills"  text="View my skills" whileHover={{scale: 1.1}}  />
 			</Link>
 
 		</motion.div>
