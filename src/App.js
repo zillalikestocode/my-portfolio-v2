@@ -10,7 +10,7 @@ import { TbWriting } from 'react-icons/tb'
 import { BiNetworkChart } from 'react-icons/bi'
 import Button from './components/Button'
 import Skills from './components/Skills'
-import { TbBrandJavascript, TbBrandHtml5, TbBrandCss3, TbBrandPython } from 'react-icons/tb'
+import { TbBrandJavascript, TbBrandHtml5, TbBrandCss3, TbBrandPython, TbBrandNextjs } from 'react-icons/tb'
 import About from './components/About'
 import glockchain from './images/Glockchain.com.png'
 import todov2 from './images/Todo list 2.0.png'
@@ -56,6 +56,12 @@ function App() {
 		name: "ReactJS",
 		pct: 70,
 		icon: <FaReact size={40} />
+	},
+	{
+		id: 6,
+		name: "NextJS",
+		pct: 50,
+		icon: <TbBrandNextjs size={40} />
 	},
 	{
 		id: 2,

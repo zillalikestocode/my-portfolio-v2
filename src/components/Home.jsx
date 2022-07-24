@@ -75,15 +75,19 @@ const Home = ({slide}) => {
 	    	<motion.div className="bg-violet-600 mr-5" variants={border} />
 	    	<motion.div>
 	    		<h4 className="text-4xl text-white font-semibold">Hi there,</h4>
-	    		<AnimatePresence>
-	    			{slide === 1 && <motion.p className="text-white text-xl my-3 overflow-hidden inline-block whitespace-nowrap" variants={text} initial="hidden" animate="visible" exit="exit" >I'm Emmanuel Ngoka</motion.p>}
+	    		<div className="my-3 mb-1">
+	    			<AnimatePresence>
+	    			{slide === 1 && <motion.p className="text-white text-xl overflow-hidden inline-block whitespace-nowrap" variants={text} initial="hidden" animate="visible" exit="exit" >I'm Emmanuel Ngoka</motion.p>}
 	    		</AnimatePresence>
 	    		<AnimatePresence>
-	    			{slide === 2 && <motion.p className="text-white text-xl my-3 overflow-hidden inline-block whitespace-nowrap" variants={text} initial="hidden" animate="visible" exit="exit" >I'm a Web Developer</motion.p>}
+	    			{slide === 2 && <motion.p className="text-white text-xl overflow-hidden inline-block whitespace-nowrap" variants={text} initial="hidden" animate="visible" exit="exit" >I'm a <span className="bg-gradient-to-r from-violet-600 to-fuchsia-500 bg-clip-text text-transparent">Web Developer</span></motion.p>}
 	    		</AnimatePresence>
 	    		<AnimatePresence>
-	    			{slide === 3 && <motion.p className="text-white text-xl my-3 overflow-hidden inline-block whitespace-nowrap" variants={text} initial="hidden" animate="visible" exit="exit" >Let's work together</motion.p>}
+	    			{slide === 3 && <motion.p className="text-white text-xl overflow-hidden inline-block whitespace-nowrap" variants={text} initial="hidden" animate="visible" exit="exit" >And a <span className="bg-gradient-to-r from-indigo-700 to-blue-500 bg-clip-text text-transparent">Graphic Designer</span></motion.p>}
 	    		</AnimatePresence>
+	    		</div>
+	    		
+	    		<p className="text-md text-white mb-2">Let's work together</p>
 	    	</motion.div>
 	    </motion.div>
 	    <ProjectSkills />
