@@ -21,7 +21,13 @@ const ProgressRing = ({ pct, radius}) => {
 	return (
 		<div className="circle-box">
 			<motion.svg className="circle" style={{width: `${radius * 2}px`, height: `${radius * 2}px`}}>
-				<motion.circle cx={radius} cy={radius} r={radius - 5} variants={variants} initial="hidden" animate="animate" style={{strokeDasharray}} />
+			<defs>
+				<linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+					<stop offset="0%" stop-color="#d946ef" />
+					<stop offset="100%" stop-color="#7c3aed" />
+				</linearGradient>
+			</defs>
+				<motion.circle cx={radius} cy={radius} r={radius - 5} variants={variants} initial="hidden" animate="animate" style={{strokeDasharray}} stroke="url(#gradient)" strokeLinecap="round"/>
 			</motion.svg>
 		</div>
 		
