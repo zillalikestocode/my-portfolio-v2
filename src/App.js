@@ -91,21 +91,21 @@ function App() {
 	const [projects, setProjects] = useState([
 	{
 		id: 1,
-		name: 'Blockchain.com parody clone',
+		name: 'Blockchain.com clone',
 		ref: 'https://glockchain.pages.dev',
-		desc: 'A blockchain.com parody clone made with ReactJS, SwiperJS and TailwindCSS ',
+		desc: 'A blockchain.com landing page clone made with ReactJS, SwiperJS and TailwindCSS.',
 		img: glockchain
 	},
 	{
 		id: 2,
 		name: 'To-do list V2',
 		ref: 'https://zillastodo-v2.pages.dev',
-		desc: "Improved version of my to-do list created with ReactJS and stores the generated list to the browser's local storage",
+		desc: "Improved version of my to-do list created with ReactJS and stores the generated list to the browser's local storage.",
 		img: todov2
 	},
 	{
 		id: 3,
-		name: 'The first version of my Portfolio',
+		name: 'My Portfolio V1',
 		ref: 'https://zillacodes.pages.dev',
 		desc: 'My first Portfolio made with HTML, CSS and Javascript.',
 		img: portfolio,
@@ -114,10 +114,39 @@ function App() {
 		id: 4,
 		name: 'To-do list V1',
 		ref: 'https://zillastodo.pages.dev',
-		desc: 'A todo list made with HTML, CSS and Javascript. My first Javascript Project xD',
+		desc: 'A todo list made with HTML, CSS and Javascript. My first Javascript Project xD.',
 		img: todo,
 	}
 	])
+
+	const [extraSkills, setExtraSkills] = useState([
+	{
+		id: 1,
+		title: 'Problem Solving',
+		eps: 'Problems or bugs are unavoidable in development. Fixing bugs is a major part of my skillset.'
+	},
+	{
+		id: 2,
+		title: 'Project Management',
+		eps: 'Some projects are so tedious and stressful to manage. I have a well defined and very productive system of managing projects.'
+	},
+	{
+		id: 3,
+		title: 'UI/UX Designing',
+		eps: 'Need to design your website or apps before writing code? I can do that :)'
+	},
+	{
+		id: 4,
+		title: 'Graphic Designing',
+		eps: "Want to design your flyers, posters, logos or merch? That's my job. I can also create 2D/3D art components for your sites."
+	},
+	{
+		id: 4,
+		title: 'Gaming',
+		eps: "I'm also (partially)available for Esports gaming events and tournaments.(Mobile only for now)"
+	}
+	])
+
 	const [width, setWidth] = useState(window.innerWidth)
 	const [textSlide, setSlide] = useState(1)
 
@@ -142,7 +171,7 @@ function App() {
       { width < 650 && <SideBar links={navlinks} />}
       <Routes>
       	<Route path='/' element={<Home slide={textSlide}/>} />
-      	<Route path='/skills' element={<Skills skills={skills}/>} />
+      	<Route path='/skills' element={<Skills skills={skills} extraSkills={extraSkills}/>} />
       	<Route path='/about' element={<About />} />
       	<Route path="/projects" element={<Projects projects={projects} />} />
       </Routes>

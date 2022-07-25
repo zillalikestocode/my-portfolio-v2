@@ -26,5 +26,19 @@ circle {
 	background-clip: text;
 	color: transparent;
 }
-
+.project-title {
+	padding-bottom: 4px;
+	position: relative;
+	text-decoration: none
+}
+.project-title::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: linear-gradient(to right,#7c3aed, #9333ea, #d946ef);
+	height: 4px;
+	border-radius: 4px;
+}
 

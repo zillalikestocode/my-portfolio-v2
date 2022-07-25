@@ -1,8 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import ProgressRing from './ProgressRing'
+import ExtraSkill from './ExtraSkill'
 
-const Skills = ({skills}) => {
+const Skills = ({skills, extraSkills}) => {
 	return (
 		<motion.div className="mx-3 text-center">
 		<h4 className="text-2xl m-5 text-[#f5f5f5] font-semibold">My Skills</h4>
@@ -17,6 +18,7 @@ const Skills = ({skills}) => {
 					)
 				})}
 			</motion.div>
+			<ExtraSkill extraSkills={extraSkills} />
 			<p className="italic text-[#f5f5f5] mt-10">"Learning has no time or age restriction, all that we need is a passion for lifelong learning."</p>
 		</motion.div>
 	)
