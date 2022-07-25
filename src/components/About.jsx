@@ -34,12 +34,14 @@ const About = () => {
 	                    <div className="min-w-[70px] mx-2 bg-violet-600 min-h-[1px] "/>
 					</div>
 					<p>Follow me on socials: </p>
-					<motion.div className="flex">
-		    		
-		    		<motion.a whileHover={{scale: 1.3,}} href="https://www.github.com/zillalikestocode" className="m-2 text-violet-600"><FaGithub size={20}/></motion.a>
-		    		<motion.a whileHover={{scale: 1.3}} href="https://www.twitter.com/zillathefirstt" className="m-2 text-violet-600"><FaTwitter size={20} /></motion.a>
-		    		<motion.a whileHover={{scale: 1.3}} href="https://www.instagram.com/the_emmanuelngoka" className="m-2 text-violet-600"><FaInstagram size={20} /></motion.a>
-	    	</motion.div>
+					<div className="h-7 w-24 ">
+						<motion.div className="flex absolute z-10 translate-x-[-50%]">
+				    		<motion.a whileHover={{scale: 1.3,}} whileTap={{scale: 1.3,}} href="https://www.github.com/zillalikestocode" className="m-2 text-violet-600"><FaGithub size={20}/></motion.a>
+				    		<motion.a whileHover={{scale: 1.3}} whileTap={{scale: 1.3,}} href="https://www.twitter.com/zillathefirstt" className="m-2 text-violet-600"><FaTwitter size={20} /></motion.a>
+				    		<motion.a whileHover={{scale: 1.3}} whileTap={{scale: 1.3,}} href="https://www.instagram.com/the_emmanuelngoka" className="m-2 text-violet-600"><FaInstagram size={20} /></motion.a>
+	    				</motion.div>
+					</div>
+					
 				</motion.div>
 			</motion.div>
 		</motion.div>
