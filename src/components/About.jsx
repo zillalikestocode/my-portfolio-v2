@@ -4,7 +4,7 @@ import {FaGithub, FaInstagram, FaTwitter} from 'react-icons/fa'
 
 const About = () => {
 	return (
-		<motion.div className="p-5 text-center text-[#f5f5f5] absolute z-10">
+		<motion.div className="p-5 text-center text-[#f5f5f5]">
 		<h4 className="text-2xl font-semibold m-3 mb-5">About me</h4>
 			{/*<motion.p className="text-lg">
 				Emmanuel Ngoka is an African born and raised up in Port-Harcourt, Nigeria. He started his coding journey in 2018 at the young age of 13. During this period, he studied Front-end Web development on scholarship awarded to him by the ResearchWindow Software Academy and graduated with a distinction. He is currently studying Computer Science at the University of Port Harcourt, Nigeria.

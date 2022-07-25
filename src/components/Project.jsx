@@ -33,7 +33,10 @@ const Project = ({project}) => {
 			<motion.div className="my-2">
 				<span className="text-xl font-semibold text-violet-600 my-2 project-title">{project.name}</span>
 				<p className="mt-2 text-md font-medium text-white">{project.desc}</p>
-				<a href={project.ref}><Button styles="p-3 bg-gradient-to-r from-violet-600 to-fuchsia-500 bg-clip-text my-3 font-medium text-md text-transparent border-2 rounded-md border-violet-600" text="Launch" whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} /></a>
+				<div>
+					<a href={project.ref} className="absolute z-10"><Button styles="p-3 bg-gradient-to-r from-violet-600 to-fuchsia-500 bg-clip-text my-3 font-medium text-md text-transparent border-2 rounded-md border-violet-600" text="Launch" whileHover={{scale: 1.1}} whileTap={{scale: 0.9}} /></a>
+
+			    </div>
 			</motion.div>
 		</motion.div>
 	)
