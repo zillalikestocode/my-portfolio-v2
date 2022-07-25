@@ -5,7 +5,7 @@ import ExtraSkill from './ExtraSkill'
 
 const Skills = ({skills, extraSkills}) => {
 	return (
-		<motion.div className="mx-3 text-center">
+		<motion.div className="mx-3 text-center absolute z-10">
 		<h4 className="text-2xl m-5 text-[#f5f5f5] font-semibold">My Skills</h4>
 			<motion.div className='flex flex-wrap items-center text-center'>
 				{skills.map(({name, pct, icon, id})=> {
