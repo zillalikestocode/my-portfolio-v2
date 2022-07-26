@@ -5,6 +5,21 @@ import { motion, AnimatePresence } from 'framer-motion'
 import ProjectSkills from './ProjectSkills'
 
 const Home = ({slide}) => {
+	const variants={
+		initial: {
+			x: '100%',
+		},
+		animate: {
+			x: 0,
+			transition: {
+				duration: 0.5,
+			}
+		},
+		exit: {
+			x: '-100%',
+			ease: 'easeInOut'
+		}
+	}
 	const socials = {
 		hidden: {
 			x: "-100%"		},
@@ -63,7 +78,7 @@ const Home = ({slide}) => {
 		}
 	}
   return (
-  	<motion.div className="pt-16 w-full absolute z-10  w-full">
+  	<motion.div className="pt-16 w-full absolute z-10  w-full" variants={variants} initial="initial" animate="animate" exit="exit" >
 	    <motion.div className="flex mx-auto w-[80%] lg:w-full items-center" variants={flex} initial="hidden" animate="visible" exit='exit'>
 	    	<motion.div className=" lg:ml-auto flex flex-col pr-3"
 	    		variants={socials} >

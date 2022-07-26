@@ -3,9 +3,24 @@ import { motion } from 'framer-motion'
 import ProgressRing from './ProgressRing'
 import ExtraSkill from './ExtraSkill'
 
+const variants={
+		initial: {
+			x: '100%',
+		},
+		animate: {
+			x: 0,
+			transition: {
+				duration: 0.5,
+			}
+		},
+		exit: {
+			x: '-100%',
+			ease: 'easeInOut'
+		}
+	}
 const Skills = ({skills, extraSkills}) => {
 	return (
-		<motion.div className="mx-3 text-center">
+		<motion.div className="mx-3 text-center" variants={variants} initial="initial" animate="animate" exit="exit">
 		<h4 className="text-2xl m-5 text-[#f5f5f5] font-semibold">My Skills</h4>
 			<motion.div className='flex flex-wrap items-center justify-center text-center'>
 				{skills.map(({name, pct, icon, id})=> {

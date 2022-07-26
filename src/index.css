@@ -31,6 +31,11 @@ circle {
 	position: relative;
 	text-decoration: none
 }
+.project-title.nav {
+	padding-bottom: inherit;
+	position: relative;
+	text-decoration: none
+}
 .project-title::after {
 	content: "";
 	position: absolute;
@@ -40,5 +45,6 @@ circle {
 	background: linear-gradient(to right,#7c3aed, #9333ea, #d946ef);
 	height: 4px;
 	border-radius: 4px;
+	transition: ease-in-out 0.4s all;
 }
 

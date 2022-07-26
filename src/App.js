@@ -169,14 +169,17 @@ function App() {
 	})
   return (
     <>
-      <Header links={navlinks} width={width} location={useLocation}/>
+      <Header links={navlinks} width={width} location={location}/>
       { width < 650 && <SideBar links={navlinks} />}
-      <Routes>
-      	<Route path='/' element={<Home slide={textSlide}/>} />
-      	<Route path='/skills' element={<Skills skills={skills} extraSkills={extraSkills}/>} />
-      	<Route path='/about' element={<About />} />
-      	<Route path="/projects" element={<Projects projects={projects} />} />
-      </Routes>
+      <AnimatePresence exitBeforeEnter>
+	      <Routes location={location} key={location.pathname}>
+	      	<Route path='/' element={<Home slide={textSlide}/>} />
+	      	<Route path='/skills' element={<Skills skills={skills} extraSkills={extraSkills}/>} />
+	      	<Route path='/about' element={<About />} />
+	      	<Route path="/projects" element={<Projects projects={projects} />} />
+	      </Routes>
+      </AnimatePresence>
+      
     </>
   );
 }
