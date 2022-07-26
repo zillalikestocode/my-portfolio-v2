@@ -31,11 +31,11 @@ const ProjectSkills = () => {
 	}
 	
 	return (
-		<motion.div className="flex flex-col mx-auto mt-5 items-center" variants={variants} initial="hidden" animate="visible">
-		<Link to="/projects" >
+		<motion.div className="flex flex-col gap-3 lg:flex-row mx-auto mt-5 items-center" variants={variants} initial="hidden" animate="visible">
+		<Link to="/projects" className="ml-auto ">
 			<Button whileTap={{scale: 0.9}} variants={button} styles=" my-3 rounded-lg p-3 px-4 bg-gradient-to-r from-violet-600 to-fuchsia-500 text-[#f5f5f5] font-medium w-fit z-[9]" text="View my projects" whileHover={{scale: 1.1}}  />
 		</Link>
-			<Link to="/skills">
+			<Link to="/skills" className="mr-auto">
 				<Button whileTap={{scale: 0.9}} variants={button} styles="rounded-lg border-2 border-violet-600  my-3 p-3 font-medium viewSkills"  text="View my skills" whileHover={{scale: 1.1}}  />
 			</Link>
 

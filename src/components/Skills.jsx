@@ -7,7 +7,7 @@ const Skills = ({skills, extraSkills}) => {
 	return (
 		<motion.div className="mx-3 text-center">
 		<h4 className="text-2xl m-5 text-[#f5f5f5] font-semibold">My Skills</h4>
-			<motion.div className='flex flex-wrap items-center text-center'>
+			<motion.div className='flex flex-wrap items-center justify-center text-center'>
 				{skills.map(({name, pct, icon, id})=> {
 					return (
 						<motion.div key={id} className="m-auto relative px-1">

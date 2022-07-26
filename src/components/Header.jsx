@@ -22,11 +22,11 @@ const Header = ({ links, width }) => {
 	}
 	return (
 		<motion.header>
-			<motion.nav className={`px-7 text-violet-600 py-4 flex items-center ${width < 650 && "pt-5"}`} variants={nav} initial='hidden' animate="animate">
+			<motion.nav className={`px-7 text-violet-600 py-3 flex items-center ${width < 650 && "pt-5"}`} variants={nav} initial='hidden' animate="animate">
 				<h4 className="text-2xl font-semibold">zilla</h4>
 				{width >= 650 && <div className="flex items-center ml-auto">
 									{ links.map((link) => {
-										return link.link ? <div key={link.id} className="m-3 font-medium text-[#f5f5f5]">{<Link to={link.link}>{link.name}</Link>}</div> : <div key={link.id} className="m-3 brightness-[0.9] hover:brightness-105 font-medium">{link.name}</div>
+										return link.link ? <div key={link.id} className="m-3 hover:text-transparent hover:bg-gradient-to-r hover:from-violet-600 hover:to-fuchsia-500 hover:bg-clip-text font-medium text-[#f5f5f5]">{<Link to={link.link}>{link.name}</Link>}</div> : <div key={link.id} className="m-3 font-medium">{link.name}</div>
 									})}
 				</div>}
 			</motion.nav>

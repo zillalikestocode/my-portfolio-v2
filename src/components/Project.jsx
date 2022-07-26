@@ -26,8 +26,8 @@ const Project = ({project}) => {
 	}
 }, [control, inView])
 	return (
-		<motion.div ref={ref} variants={variants} initial="hidden" animate={control} className="p-3 bg-slate-900 w-[80%] rounded-lg m-4 mx-auto">
-			<motion.div className="max-h-80 overflow-hidden">
+		<motion.div ref={ref} variants={variants} initial="hidden" animate={control} className="p-3 bg-slate-900 w-[80%] lg:w-56 rounded-lg m-4 mx-auto" whileHover={{scale: 1.05}} >
+			<motion.div className="max-h-80 lg:max-h-40 overflow-hidden">
 				<img className="h-fit rounded-t-lg" src={project.img} alt="" />
 			</motion.div>
 			<motion.div className="my-2">
