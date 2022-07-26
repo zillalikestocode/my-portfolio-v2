@@ -34,7 +34,7 @@ const About = () => {
 			{/*<motion.p className="text-lg">
 				Emmanuel Ngoka is an African born and raised up in Port-Harcourt, Nigeria. He started his coding journey in 2018 at the young age of 13. During this period, he studied Front-end Web development on scholarship awarded to him by the ResearchWindow Software Academy and graduated with a distinction. He is currently studying Computer Science at the University of Port Harcourt, Nigeria.
 			</motion.p>*/}
-			<motion.div className="lg:flex lg:justify-center lg:gap-12 mx-7" variants={parent}>
+			<motion.div className="lg:flex lg:justify-center lg:gap-12 lg:mx-7" variants={parent}>
 				<motion.div variants={variants} className="lg:w-96 bg-slate-900 text-white w-full rounded-lg text-left py-5 px-4">
 				<motion.div className="mb-3">
 					<span className="mb-1 project-title py-4 mb-2 text-lg lg:text-2xl font-medium bg-gradient-to-r from-violet-600 to-fuchsia-500 bg-clip-text text-transparent">Short Bio</span>

@@ -65,7 +65,7 @@ const Home = ({slide}) => {
   return (
   	<motion.div className="pt-16 w-full absolute z-10  w-full">
 	    <motion.div className="flex mx-auto w-[80%] lg:w-full items-center" variants={flex} initial="hidden" animate="visible" exit='exit'>
-	    	<motion.div className=" ml-auto flex flex-col pr-3"
+	    	<motion.div className=" lg:ml-auto flex flex-col pr-3"
 	    		variants={socials} >
 	    		
 	    		<motion.a whileHover={{scale: 1.3,}} href="https://www.github.com/zillalikestocode" className="m-2 text-violet-600"><FaGithub size={20}/></motion.a>
@@ -73,7 +73,7 @@ const Home = ({slide}) => {
 	    		<motion.a whileHover={{scale: 1.3}} href="https://www.instagram.com/the_emmanuelngoka" className="m-2 text-violet-600"><FaInstagram size={20} /></motion.a>
 	    	</motion.div>
 	    	<motion.div className="bg-violet-600 mr-5" variants={border} />
-	    	<motion.div className="mr-auto">
+	    	<motion.div className="lg:mr-auto">
 	    		<h4 className="text-4xl lg:text-5xl text-white font-semibold">Hi there,</h4>
 	    		<div className="my-3 mb-1">
 	    			<AnimatePresence>
