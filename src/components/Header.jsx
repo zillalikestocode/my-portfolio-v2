@@ -5,7 +5,7 @@ import Sidebar from './SideBar'
 import Button from './Button'
 import { FaBars } from 'react-icons/fa'
 
-const Header = ({ links, width }) => {
+const Header = ({ links, width, location }) => {
 	const nav = {
 		hidden: {
 			y: "-100%"

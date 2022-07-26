@@ -4,7 +4,7 @@ import Home from './components/Home'
 import Header from './components/Header'
 import SideBar from './components/SideBar'
 import { Route, Routes} from 'react-router-dom'
-import { motion, AnimatePresence} from 'framer-motion'
+import { motion, AnimatePresence, useLocation} from 'framer-motion'
 import { FaHome, FaLaptopCode, FaReact } from 'react-icons/fa'
 import { TbWriting } from 'react-icons/tb'
 import { BiNetworkChart } from 'react-icons/bi'
@@ -17,8 +17,10 @@ import todov2 from './images/Todo list 2.0.png'
 import todo from './images/Todo list.png'
 import portfolio from './images/Welcome to my Portfolio.png'
 import Projects from './components/Projects'
+
 function App() {
 	const iconSize= 20
+	const location = useLocation()
 	const [navlinks, setLInks] = useState([
 	{
 		id: 1,
@@ -167,7 +169,7 @@ function App() {
 	})
   return (
     <>
-      <Header links={navlinks} width={width}/>
+      <Header links={navlinks} width={width} location={useLocation}/>
       { width < 650 && <SideBar links={navlinks} />}
       <Routes>
       	<Route path='/' element={<Home slide={textSlide}/>} />
