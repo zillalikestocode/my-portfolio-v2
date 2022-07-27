@@ -4,7 +4,7 @@ import Home from './components/Home'
 import Header from './components/Header'
 import SideBar from './components/SideBar'
 import { Route, Routes, useLocation} from 'react-router-dom'
-import { motion, AnimatePresence} from 'framer-motion'
+import { motion, AnimatePresence, useCycle} from 'framer-motion'
 import { FaHome, FaLaptopCode, FaReact } from 'react-icons/fa'
 import { TbWriting } from 'react-icons/tb'
 import { BiNetworkChart } from 'react-icons/bi'
@@ -17,9 +17,11 @@ import todov2 from './images/Todo list 2.0.png'
 import todo from './images/Todo list.png'
 import portfolio from './images/Welcome to my Portfolio.png'
 import Projects from './components/Projects'
+import MenuToggle from './components/MenuToggle'
 
 function App() {
 	const iconSize= 20
+	const [isOpen, toggleOpen] = useCycle(false, true);
 	const location = useLocation()
 	const [navlinks, setLInks] = useState([
 	{
@@ -170,7 +172,8 @@ function App() {
   return (
     <>
       <Header links={navlinks} width={width} location={location}/>
-      { width < 650 && <SideBar links={navlinks} />}
+      { width < 650 && <SideBar links={navlinks} isOpen={isOpen} toggleOpen={toggleOpen} />}
+      { width < 650 && <MenuToggle toggle={() => toggleOpen()} isOpen={isOpen} />}
       <AnimatePresence exitBeforeEnter>
 	      <Routes location={location} key={location.pathname}>
 	      	<Route path='/' element={<Home slide={textSlide}/>} />

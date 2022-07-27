@@ -24,7 +24,7 @@ const Projects = ({projects}) => {
 			<motion.div className="flex flex-wrap lg:items-start lg:justify-center lg:shrink-0">
 				{ projects.map((project)=>{
 					return (
-						<Project project={project} id={project.id}/>
+						<Project project={project} key={project.id}/>
 					)
 				})}
 			</motion.div>

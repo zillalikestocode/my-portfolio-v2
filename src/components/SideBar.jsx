@@ -29,7 +29,8 @@ const slideIn = {
 	},
 	closed: {
 		x: 0,
-		zIndex: 5,
+		zIndex: 1,
+		pointerEvents: 'none',
 		transition: {
 			type: 'spring',
 			duration: 0.4,
@@ -39,11 +40,11 @@ const slideIn = {
 	open: {
 		x: 0,
 		zIndex: 20,	
+		pointerEvents: 'auto'
 		}
 }
 
-const SideBar = ({links}) => {
-	const [isOpen, toggleOpen] = useCycle(false, true);
+const SideBar = ({links, isOpen, toggleOpen}) => {
 	const containerRef = useRef(null)
 	const {height} = useDimensions(containerRef)
 	return (
@@ -56,7 +57,6 @@ const SideBar = ({links}) => {
 			variants={slideIn}
 			>
 			<motion.div className="absolute top-0 right-0 bottom-0 w-[300px] bg-slate-700" variants={sidebar}/>
-			<MenuToggle toggle={() => toggleOpen()} />
 			<Navigation links={links} toggle={() => toggleOpen()} isOpen={isOpen}/>
 		</motion.nav>
 	)
