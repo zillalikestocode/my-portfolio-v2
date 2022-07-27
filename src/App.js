@@ -50,7 +50,7 @@ function App() {
 	},
 	{
 		id: 5,
-		name: <a href="../public/my-cv.pdf"><Button text="Download CV" styles="p-3 bg-violet-600 text-[#f5f5f5] rounded-md font-medium" /></a>,
+		name: <a href="./docs/my-cv.pdf" download><Button text="Download CV" styles="p-3 bg-violet-600 text-[#f5f5f5] rounded-md font-medium" /></a>,
 		notALink: true,
 	}
 	])
