@@ -18,6 +18,7 @@ import todo from './images/Todo list.png'
 import portfolio from './images/Welcome to my Portfolio.png'
 import Projects from './components/Projects'
 import MenuToggle from './components/MenuToggle'
+import cv from './docs/my-cv.pdf'
 
 function App() {
 	const iconSize= 20
@@ -50,7 +51,7 @@ function App() {
 	},
 	{
 		id: 5,
-		name: <a href="./docs/my-cv.pdf" download><Button text="Download CV" styles="p-3 bg-violet-600 text-[#f5f5f5] rounded-md font-medium" /></a>,
+		name: <a href={cv} download><Button text="Download CV" styles="p-3 bg-violet-600 text-[#f5f5f5] rounded-md font-medium" /></a>,
 		notALink: true,
 	}
 	])
