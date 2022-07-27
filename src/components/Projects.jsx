@@ -19,7 +19,7 @@ const variants={
 	}
 const Projects = ({projects}) => {
 	return (
-		<motion.div className="" variants={variants} initial='initial' animate="animate" exit="exit" >
+		<motion.div className="absolute" variants={variants} initial='initial' animate="animate" exit="exit" >
 		<h4 className="text-2xl text-[#f5f5f5] my-5 font-semibold w-full text-center">My Projects</h4>
 			<motion.div className="flex flex-wrap lg:items-start lg:justify-center lg:shrink-0">
 				{ projects.map((project)=>{
