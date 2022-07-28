@@ -21,7 +21,7 @@ const Projects = ({projects}) => {
 	return (
 		<motion.div className="absolute" variants={variants} initial='initial' animate="animate" exit="exit" >
 		<h4 className="text-2xl text-[#f5f5f5] my-5 font-semibold w-full text-center">My Projects</h4>
-			<motion.div className="flex flex-wrap lg:items-start lg:justify-center lg:shrink-0">
+			<motion.div className="flex flex-wrap lg:justify-center lg:shrink-0">
 				{ projects.map((project)=>{
 					return (
 						<Project project={project} key={project.id}/>
