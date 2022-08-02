@@ -19,6 +19,8 @@ import portfolio from './images/Welcome to my Portfolio.png'
 import Projects from './components/Projects'
 import MenuToggle from './components/MenuToggle'
 import cv from './docs/my-cv.pdf'
+import tic from './images/tic.png'
+import weather from './images/weather.png'
 
 function App() {
 	const iconSize= 20
@@ -100,6 +102,20 @@ function App() {
 		ref: 'https://glockchain.pages.dev',
 		desc: 'A blockchain.com landing page clone made with ReactJS, SwiperJS and TailwindCSS.',
 		img: glockchain
+	},
+	{
+		id: 5,
+		name: 'Weather widget',
+		ref: 'https://weather-widg.netlify.app',
+		desc: 'A weather widget with real time weather data updated every three hours.',
+		img: weather
+	},
+	{
+		id:6,
+		name: 'Tic tac toe game',
+		ref: 'https://zilla-tic.netlfy.app',
+		desc: 'A functional tic tac toe game',
+		img: tic
 	},
 	{
 		id: 2,
