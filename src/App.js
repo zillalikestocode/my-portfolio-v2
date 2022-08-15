@@ -21,6 +21,7 @@ import MenuToggle from './components/MenuToggle'
 import cv from './docs/my-cv.pdf'
 import tic from './images/tic.png'
 import weather from './images/weather.png'
+import memories from './images/social1.png'
 
 function App() {
 	const iconSize= 20
@@ -96,6 +97,13 @@ function App() {
 	}
 	])
 	const [projects, setProjects] = useState([
+	{
+		id: 6,
+		name: 'Memories app',
+		ref: 'https://z-memories.netlify.app',
+		desc: 'A fullstack social media web app with google authentication and sign in functionality that allows users to post, like and comment to posts.',
+		img: memories
+	},
 	{
 		id: 1,
 		name: 'Blockchain.com clone',
