@@ -113,7 +113,7 @@ function App() {
 	{
 		id:6,
 		name: 'Tic tac toe game',
-		ref: 'https://zilla-tic.netlfy.app',
+		ref: 'https://zilla-tic.netlify.app',
 		desc: 'A functional tic tac toe game',
 		img: tic
 	},
