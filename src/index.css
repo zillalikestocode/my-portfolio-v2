@@ -9,7 +9,7 @@
 	font-weight: 400,
 }
 body {
-	background: #121212;
+	@apply bg-black;
 }
 svg.circle {
 	transform: rotate(-90deg);
