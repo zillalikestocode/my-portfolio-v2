@@ -22,6 +22,9 @@ import cv from './docs/cv1.pdf'
 import tic from './images/tic.png'
 import weather from './images/weather.png'
 import memories from './images/social1.png'
+import chat from './images/Chat.png'
+import music from './images/Z-muzic.png'
+import prod from './images/prod.png'
 
 function App() {
 	const iconSize= 20
@@ -98,7 +101,14 @@ function App() {
 	])
 	const [projects, setProjects] = useState([
 	{
-		id: 6,
+		id: 10,
+		name: 'Remote Music Player',
+		ref: 'https://z-music-player.vercel.app',
+		desc: 'A remote music player that connects to your Spotify account and plays songs in your playlists. This was built with NextJS with Typescript, Spotify API, Next Auth, Redux Toolkit and TailwindCSS.',
+		img: music
+	},
+	{
+		id: 7,
 		name: 'Memories app',
 		ref: 'https://z-memories.netlify.app',
 		desc: 'A fullstack social media web app with google authentication and sign in functionality that allows users to post, like and comment to posts.',
@@ -110,6 +120,20 @@ function App() {
 		ref: 'https://glockchain.pages.dev',
 		desc: 'A blockchain.com landing page clone made with ReactJS, SwiperJS and TailwindCSS.',
 		img: glockchain
+	},
+	{
+		id: 9,
+		name: 'Chat app',
+		ref: 'https://z-chat-app.netlify.app',
+		desc: 'A chat app made with ReactJS, Socket.IO, TailwindCSS and MongoDB',
+		img: chat
+	},
+	{
+		id: 8,
+		name: 'A productivity web app',
+		ref: 'https://z-productive.netlify.app',
+		desc: 'A mobile Productivity web app built with ReactJS, TailwindCSS and firebase',
+		img: prod
 	},
 	{
 		id: 5,
